@@ -1,0 +1,95 @@
+# Library Management System
+
+A Library Management System developed using the **Frappe Framework** and Python. This project manages library members, books, book issuing, and returning operations.
+
+## Features
+
+- Manage library members.
+- Manage library books.
+- Automatically generate document IDs.
+- Issue books to library members.
+- Return issued books.
+- Maintain available book quantities.
+- Validate member status before issuing books.
+- Prevent issuing more books than available.
+- Maintain transaction records.
+
+## Technologies Used
+
+- Python
+- Frappe Framework
+- MariaDB
+- JavaScript
+- HTML / CSS
+
+## DocTypes
+
+### 1. Library Member
+Stores member information:
+- Member Name
+- Email
+- Phone
+- Membership Date
+- Membership Status
+
+### 2. Library Book
+Stores book information:
+- Book Title
+- ISBN
+- Author
+- Publisher
+- Published Date
+- Quantity
+- Available Copies
+- Shelf Location
+
+### 3. Library Transaction
+Manages book issuing and returning:
+- Member
+- Transaction Date
+- Due Date
+- Books
+- Status
+
+### 4. Transaction Book (Child DocType)
+Stores multiple books and their quantities inside a Library Transaction.
+
+## Project Structure
+
+```text
+library_management/
+├── library_management/
+│   ├── doctype/
+│   │   ├── library_member/
+│   │   ├── library_book/
+│   │   ├── library_transaction/
+│   │   └── transaction_book/
+│   ├── hooks.py
+│   └── modules.txt
+├── pyproject.toml
+└── README.md
+```
+
+## Installation
+
+1. Set up Frappe Bench.
+2. Get the Library Management app.
+3. Install the app on your Frappe site.
+4. Run database migrations.
+5. Start the Bench server.
+
+## Learning Outcomes
+
+- Understanding Frappe DocTypes.
+- Understanding Child DocTypes and parent-child relationships.
+- Implementing Python Framework Controllers.
+- Working with document lifecycle methods.
+- Implementing validations and business logic.
+
+## Author
+
+Sneha Satheesh
+
+## Project
+
+Library Management System using Frappe Framework.
